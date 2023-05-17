@@ -1,0 +1,14 @@
+@import './base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* * {
+  border: 1px dotted red !important;
+} */
+
+body {
+  background-color: white
+}
