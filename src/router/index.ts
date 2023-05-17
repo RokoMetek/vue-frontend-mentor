@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue';
-import ThreePreviewCardVue from '../views/ThreePreviewCard.vue';
-
+import HomeView from '../views/HomeView.vue'
+import ThreePreviewCardVue from '../views/ThreePreviewCard.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,7 +11,7 @@ const router = createRouter({
       component: ThreePreviewCardVue
     },
     {
-      path:'/four-card-feature',
+      path: '/four-card-feature',
       name: 'fourCardFeature',
       component: () => import('../views/FourCardFeature.vue')
     },

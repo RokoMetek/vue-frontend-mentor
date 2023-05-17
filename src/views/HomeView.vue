@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import PreviewCard from '../components/PreviewCard.vue';
-
+import PreviewCard from '../components/PreviewCard.vue'
 </script>
 
 <template>
   <main class="container mx-auto">
-    <div class="main flex flex-row flex-wrap justify-center">
-      Home
-    </div>
+    <div class="main flex flex-row flex-wrap justify-center">Home</div>
   </main>
 </template>
 

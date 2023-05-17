@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import  AppNavbar from './components/AppNavbar.vue';
-
+import AppNavbar from './components/AppNavbar.vue'
 </script>
 
 <template>
   <header>
-    <AppNavbar /> 
+    <AppNavbar />
   </header>
   <RouterView />
 </template>

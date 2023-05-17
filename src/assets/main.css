@@ -4,11 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* * {
   border: 1px dotted red !important;
 } */
 
 body {
-  background-color: white
+  background-color: white;
 }
