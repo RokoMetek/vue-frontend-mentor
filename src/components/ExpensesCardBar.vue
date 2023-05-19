@@ -25,12 +25,14 @@ const showPrice = ref(false);
 <template>
   <div class="flex flex-col items-center justify-end h-48 relative">
     <!-- <p class="price-label w-full flex  justify-center px-1 text-md mb-2 ">{{ price }}</p> -->
-    <div class="bg-green-500 w-9/12 rounded-md relative chart-bar relative" 
+    <div class="bg-green-500 w-1/2 rounded-md relative chart-bar relative" 
       @mouseover="showPrice = true"
       @mouseleave="showPrice = false"
       :data-content="price"
       :style="{ height: barPercentage, '--bar-chart-color': barColor, '--price-content': price }">
-      <div class="price-label flex justify-center absolute px-1 text-md " v-show="showPrice">{{ price }}</div>
+      <!-- <div class="price-label flex justify-center absolute px-1 text-md " v-show="showPrice">{{ price }}</div> -->
+
+      <div class="price-label text-white flex justify-center absolute px-2 py-1 text-md " v-show="showPrice">{{ price }}</div>
     </div>
   </div>
   <div class="text-center">{{ day }}</div>
@@ -60,10 +62,9 @@ export default defineComponent({
 
 .price-label {
   /* position: absolute; */
-  top: -30px;
-  /* position: initial; */
-  /* left: -5px; */
-  /* color: white; */
+  top: -35px;
+  transform: translate(-50%);
+  left: 50%;
   background-color: hsl(25, 47%, 15%);
   border-radius: 0.35rem;
 }

@@ -1,7 +1,6 @@
 <template>
-  <div class="max-w-xl min-w-xl bg-white border border-gray-200 rounded-lg shadow p-8 w-[42rem] mx-6">
+  <div class="max-w-2xl min-w-min bg-white border border-gray-200 rounded-lg shadow p-8 mx-6">
     <h5 class="mb-8 text-3xl font-bold tracking-tight text-gray-900">Spending - last 7 Days</h5>
-
     <table class="table-fixed w-full chart-table" aria-describedby="chart-table">
       <tbody>
         <th></th>
@@ -34,13 +33,13 @@
     <div class="border-t border-gray-300 my-6"></div>
 
     <div class="flex gap-4 justify-between">
-      <div class="flex flex-col text-black">
-        <p class="text-md">Total this month</p>
+      <div class="flex flex-col text-black gap-2">
+        <p class="text-md text-info-label">Total this month</p>
         <p class="text-5xl font-extrabold">$478.33</p>
       </div>
-      <div class="flex flex-col justify-end text-black">
-        <p class="text-sm font-extrabold">+2.4%</p>
-        <p class="text-md">$478.33</p>
+      <div class="flex flex-col justify-end text-black gap-2">
+        <p class="text-sm font-extrabold text-end">+2.4%</p>
+        <p class="text-md text-info-label">from last month</p>
       </div>
     </div>
   </div>
@@ -62,4 +61,9 @@ export default defineComponent({
 .chart-table td {
   /* padding: 1rem; */
 }
+
+.text-info-label {
+ color: #93867b; 
+}
+
 </style>
