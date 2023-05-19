@@ -20,6 +20,12 @@ const router = createRouter({
       name: 'socialProof',
       component: () => import('../views/SocialProof.vue')
     },
+
+    {
+      path: '/expenses',
+      name: 'expenses',
+      component: () => import('../views/ExpensesView.vue')
+    },
     {
       path: '/about',
       name: 'about',

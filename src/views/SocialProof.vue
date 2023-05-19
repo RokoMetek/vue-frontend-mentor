@@ -4,30 +4,28 @@ import SocialRating from '../components/SocialRating.vue'
 </script>
 
 <template>
-  <main class="container mx-auto relative">
+  <main class="container mx-auto h-screen">
     <img
       src="/assets/images/bg-pattern-top-desktop.svg"
       alt="bgPattern"
-      class="absolute top-0 left-0 hidden md:block"
+      class="fixed top-0 left-0 hidden md:block"
     />
     <img
       src="/assets/images/bg-pattern-bottom-desktop.svg"
       alt="bgPattern"
-      class="absolute bottom-0 right-0 hidden md:block"
+      class="fixed bottom-0 right-0 hidden md:block"
     />
     <img
       src="/assets/images/bg-pattern-top-mobile.svg"
       alt="bgPattern"
-      class="absolute top-0 left-0 md:hidden"
+      class="fixed top-0 left-0 md:hidden"
     />
     <img
       src="/assets/images/bg-pattern-bottom-mobile.svg"
       alt="bgPattern"
-      class="absolute bottom-0 right-0 md:hidden"
+      class="fixed bottom-0 right-0 md:hidden"
     />
-    <!-- <img src="/assets/images/bg-pattern-top-desktop.svg" alt="bgPattern" class="absolute top-0 left-0" :srcset="`/assets/images/bg-pattern-top-desktop.svg, /assets/images/bg-pattern-top-mobile.svg`">
-      <img src="/assets/images/bg-pattern-bottom-desktop.svg" alt="bgPattern" class="absolute bottom-0 right-0" :srcset="`/assets/images/bg-pattern-bottom-desktop.svg, /assets/images/bg-pattern-bottom-mobile.svg`"> -->
-    <div class="main md:flex md:flex-row grid grid-cols-1 gap-12 flex-wrap justify-center relative">
+    <div class="main md:flex md:flex-row grid grid-cols-1 gap-12 flex-wrap justify-center">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
         <div class="text-black max-w-md md:justify-self-start justify-self-center">
           <h6 class="text-6xl font-black mb-8">10,000+ of our users love our products.</h6>

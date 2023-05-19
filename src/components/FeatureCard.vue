@@ -27,7 +27,6 @@ const props = defineProps({
     <p class="mb-6 font-normal content-text">{{ contentText }}</p>
     <div class="flex justify-end">
       <slot></slot>
-      <!-- <img src="/assets/images/icon-team-builder.svg" class="h-16 w-16"> -->
     </div>
   </div>
 </template>

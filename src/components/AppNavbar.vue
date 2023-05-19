@@ -9,7 +9,7 @@ const toggleNavbar = () => {
 </script>
 
 <template>
-  <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-zinc-500 mb-3">
+  <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-500 mb-3">
     <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
       <div
         class="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start"
@@ -60,6 +60,15 @@ const toggleNavbar = () => {
             >
               <i class="fab fa-twitter text-lg leading-lg text-white opacity-75"></i>
               <span class="ml-2">Social Proof</span>
+            </RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink
+              to="/expenses"
+              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+            >
+              <i class="fab fa-twitter text-lg leading-lg text-white opacity-75"></i>
+              <span class="ml-2">Expenses</span>
             </RouterLink>
           </li>
         </ul>
