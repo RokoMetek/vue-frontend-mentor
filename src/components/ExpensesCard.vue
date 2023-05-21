@@ -21,10 +21,10 @@
             <ExpensesCardBar :day="'fri'" :bar-percentage="'90%'"></ExpensesCardBar>
           </td>
           <td>
-            <ExpensesCardBar :day="'sat'"></ExpensesCardBar>
+            <ExpensesCardBar :day="'sat'" :bar-percentage="'25%'"></ExpensesCardBar>
           </td>
           <td>
-            <ExpensesCardBar :day="'sun'"></ExpensesCardBar>
+            <ExpensesCardBar :day="'sun'" :bar-percentage="'50%'"></ExpensesCardBar>
           </td>
         </tr>
       </tbody>
