@@ -1,4 +1,6 @@
 <script setup lang="ts">
+
+
 const props = defineProps({
   day: {
     type: String,
@@ -24,7 +26,7 @@ const showPrice = ref(false);
 
 <template>
   <div class="flex flex-col items-center justify-end h-48 relative">
-    <div class="bg-green-500 w-1/2 rounded-md relative chart-bar bg-opacity-50" @mouseover="showPrice = true"
+    <div class="bg-green-500 md:w-1/2 w-1/3 rounded-md relative chart-bar bg-opacity-50" @mouseover="showPrice = true"
       @mouseleave="showPrice = false" :data-content="price"
       :style="{ height: barPercentage, '--bar-chart-color': barColor, '--price-content': price, '--bar-chart-color-hover': barChartColorWithOpacity }">
       <div class="price-label text-white flex justify-center absolute px-2 py-1 text-md " v-show="showPrice">{{ price }}

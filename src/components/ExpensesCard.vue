@@ -1,3 +1,17 @@
+<script setup lang="ts">
+
+import data from "../assets/data/data.json";
+import type { Expenses } from "../data/models/expense.model"
+
+
+const expenses = ref(data as Expenses[]);
+
+
+
+
+</script>
+
+
 <template>
   <div class="max-w-2xl min-w-min bg-white border border-gray-200 rounded-lg shadow p-8 mx-6">
     <h5 class="mb-8 text-3xl font-bold tracking-tight text-gray-900">Spending - last 7 Days</h5>
@@ -5,26 +19,8 @@
       <tbody>
         <th></th>
         <tr>
-          <td>
-            <ExpensesCardBar :day="'mon'"></ExpensesCardBar>
-          </td>
-          <td class="">
-            <ExpensesCardBar :day="'tue'" :bar-percentage="'20%'"></ExpensesCardBar>
-          </td>
-          <td>
-            <ExpensesCardBar :day="'wed'" :bar-percentage="'75%'"></ExpensesCardBar>
-          </td>
-          <td>
-            <ExpensesCardBar :day="'thu'" :bar-percentage="'100%'"></ExpensesCardBar>
-          </td>
-          <td>
-            <ExpensesCardBar :day="'fri'" :bar-percentage="'90%'"></ExpensesCardBar>
-          </td>
-          <td>
-            <ExpensesCardBar :day="'sat'" :bar-percentage="'25%'"></ExpensesCardBar>
-          </td>
-          <td>
-            <ExpensesCardBar :day="'sun'" :bar-percentage="'50%'"></ExpensesCardBar>
+          <td v-for="ex in expenses" :key="ex.day">
+            <ExpensesCardBar :day="ex.day" :bar-percentage="ex.amount + '%'"></ExpensesCardBar>
           </td>
         </tr>
       </tbody>
@@ -46,7 +42,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import ExpensesCardBar from './ExpensesCardBar.vue'
 
 export default defineComponent({
@@ -63,7 +59,6 @@ export default defineComponent({
 }
 
 .text-info-label {
- color: #93867b; 
+  color: #93867b;
 }
-
 </style>
