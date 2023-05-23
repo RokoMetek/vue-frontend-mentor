@@ -4,7 +4,7 @@ import SocialRating from '../components/SocialRating.vue'
 </script>
 
 <template>
-  <main class="container mx-auto h-screen">
+  <main class="container mx-auto h-screen mt-8">
     <img
       src="/assets/images/bg-pattern-top-desktop.svg"
       alt="bgPattern"

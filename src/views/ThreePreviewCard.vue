@@ -3,7 +3,7 @@ import PreviewCard from '../components/PreviewCard.vue'
 </script>
 
 <template>
-  <main class="container mx-auto">
+  <main class="container mx-auto flex flex-col justify-center">
     <div class="main flex flex-row flex-wrap justify-center">
       <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center">
         <PreviewCard :title="'SEDANS'" :bg-color="'hsl(31, 77%, 52%)'" class="">

@@ -3,7 +3,7 @@ import FeatureCard from '../components/FeatureCard.vue'
 </script>
 
 <template>
-  <main class="container mx-auto text-black">
+  <main class="container-2xl mx-auto flex flex-col justify-center text-black">
     <div class="grid grid-cols-1 gap-6 justify-items-center">
       <div class="grid grid-cols-1 flex-row flex-wrap justify-center text-3xl text-center max-w-xl">
         <div class="mb-4">

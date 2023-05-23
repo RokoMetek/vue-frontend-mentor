@@ -5,7 +5,7 @@ import ExpensesCardHeader from '../components/ExpensesCardHeader.vue'
 </script>
 
 <template>
-  <main class="container flex flex-col justify-center mx-auto h-screen bg-gray-200 text-black">
+  <main class="container-2xl flex flex-col justify-center mx-auto h-screen bg-gray-200 text-black">
     <div class="expenses flex justify-center">
       <div class="flex flex-col gap-4">
        <ExpensesCardHeader></ExpensesCardHeader>
