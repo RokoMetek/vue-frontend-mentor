@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-md bg-white rounded-lg shadow p-8 mx-6 advice-card flex flex-col justify-center gap-8 relative pb-14">
-    <h3 class="text-sm text-green-400 font-bold text-center tracking-widest">ADVICE #117</h3>
+    <h3 class="text-sm text-green-400 font-bold text-center tracking-widest">ADVICE #{{  id }}</h3>
     <div class="text-white text-2xl text-center">
       <p class="font-extrabold">{{  advice }}</p>
     </div>
@@ -24,6 +24,7 @@ export default defineComponent({
       return fetchAdvice().then(
         (res) => {
           this.advice = res.slip.advice;
+          this.id = res.slip.id;
         }).
         catch(err => {
           console.log("Error: ", err)
@@ -32,8 +33,10 @@ export default defineComponent({
   },
   data() {
     return {
-      advice: ''
+      advice: '',
+      id: 0
     }
+
   },
   created() {
     this.fetchAdvice()
@@ -45,18 +48,10 @@ export default defineComponent({
 
 <style scoped>
 .advice-card {
-  /* background-color: hsl(217, 19%, 38%); */
-
-  /* background-color: hsl(193, 38%, 86%); */
-  /* background-color: hsl(150, 100%, 66%); */
-  /* background-color: hsl(217, 19%, 38%); */
   background-color: hsl(217, 19%, 24%);
-  /* background-color: hsl(218, 23%, 16%); */
 }
 
 .advice-card-dice:hover {
   box-shadow: 0px 0px 16px 1px hsl(150, 100%, 66%);
-  /* -webkit-box-shadow: -4px 4px 48px 10px hsl(150, 100%, 66%);
-    -moz-box-shadow: -4px 4px 48px 10px hsl(150, 100%, 66%); */
 }
 </style>
