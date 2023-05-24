@@ -39,10 +39,10 @@ const onFormReset = () => {
 </script>
 
 <template>
-  <div class="max-w-3xl bg-white rounded-2xl shadow p-6 flex flex-col justify-center gap-8 relative font-SpaceMono">
+  <div class="max-w-3xl bg-white rounded-2xl shadow p-6 flex flex-col justify-center gap-8 relative font-SpaceMono mx-4">
     <form ref="formRef">
       <div class="flex flex-col md:flex-row gap-8 justify-between p-4">
-        <div class="card-left w-1/2">
+        <div class="card-left md:w-1/2">
           <div class="mb-6">
             <label for="bill" class="block mb-2 text-md font-bold text-label">Bill</label>
             <div class="relative">
@@ -94,7 +94,7 @@ const onFormReset = () => {
           </div>
         </div>
 
-        <div class="total-card flex flex-col rounded-2xl justify-between w-1/2 p-8">
+        <div class="total-card flex flex-col rounded-2xl justify-between md:w-1/2 p-8">
           <div class="flex flex-col gap-12 py-4">
             <div class="flex justify-between">
               <div class="text-sm flex flex-col gap-1">
