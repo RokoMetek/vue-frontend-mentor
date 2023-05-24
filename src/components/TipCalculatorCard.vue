@@ -9,23 +9,28 @@
               <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <img src="/assets/images/icon-dollar.svg" alt="person">
               </div>
-              <input type="text" id="bill"
-                class="bg-gray-50 border border-gray-300 text-gray-900 rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-xl font-bold text-end"
-                placeholder="0" required>
+              <input type="number" id="bill" class="bg-gray-100 text-tipBox rounded-md 
+                    focus:outline-none focus:border--500 focus:ring-tipBox focus:ring-2
+                    focus:invalid:border-red-500 focus:invalid:ring-red-500 
+                    focus:valid:border-strongCyan focus:valid:ring-strongCyan 
+                    block w-full p-2.5 text-xl font-bold text-end" placeholder="0" required>
             </div>
           </div>
           <div class="mb-6">
-            <label for="tip" class="block mb-2 text-md font-bold text-label">Select Tip %</label>
+            <label for="" class="block mb-2 text-md font-bold text-label">Select Tip %</label>
             <div class="grid grid-cols-3 gap-2 text-center text-white text-xl">
-              <div class="tip-box rounded-md font-bold p-2.5">5%</div>
-              <div class="tip-box rounded-md font-bold p-2.5">10%</div>
-              <div class="tip-box rounded-md font-bold p-2.5">15%</div>
-              <div class="tip-box rounded-md font-bold p-2.5">25%</div>
-              <div class="tip-box rounded-md font-bold p-2.5">50%</div>
-
+              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox">5%</button>
+              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox">10%</button>
+              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox">15%</button>
+              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox">20%</button>
+              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox">25%</button>
               <div class="tip-box-custom rounded-md font-bold">
-                <input type="text" id="custom-tip"
-                  class="tip-box-custom text-center bg-gray-50 text-gray-900 rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                <input type="number" id="custom-tip"
+                  class="text-center bg-gray-50 text-tipBox rounded-md block w-full p-2.5 
+                  focus:outline-none focus:border--500 focus:ring-tipBox focus:ring-2
+                    focus:invalid:border-red-500 focus:invalid:ring-red-500 
+                    focus:valid:border-strongCyan focus:valid:ring-strongCyan 
+                  "
                   placeholder="Custom" required>
               </div>
             </div>
@@ -37,9 +42,11 @@
               <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <img src="/assets/images/icon-person.svg" alt="person">
               </div>
-              <input type="text" id="people"
-                class="text-gray-900 rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-xl font-bold text-end bg-teal-50"
-                placeholder="0" required>
+              <input type="number" id="people" class="bg-gray-100 text-tipBox rounded-md 
+                    focus:outline-none focus:border--500 focus:ring-tipBox focus:ring-2
+                    focus:invalid:border-red-500 focus:invalid:ring-red-500 
+                    focus:valid:border-strongCyan focus:valid:ring-strongCyan 
+                  block w-full p-2.5 text-xl font-bold text-end" placeholder="0" min="1" required>
             </div>
           </div>
         </div>
@@ -68,15 +75,13 @@
             </div>
           </div>
           <button
-            class="reset-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="button">RESET</button>
-
+            class="reset-button hover:bg-tipBox text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit">RESET</button>
         </div>
-
-
       </div>
     </form>
   </div>
+  
 </template>
 
 
@@ -91,6 +96,17 @@ export default defineComponent({
 </script>
 
 <style scoped>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 .text-label {
   color: hsl(184, 14%, 56%);
 }
@@ -99,34 +115,22 @@ export default defineComponent({
   background-color: hsl(183, 100%, 15%);
 }
 
-.tip-box {
-  background-color: hsl(183, 100%, 15%);
+
+.bg-tipBox:hover {
+  background-color: hsl(172, 67%, 45%);
+
 }
 
 .tip-box-custom {
   background-color: hsl(189, 41%, 97%);
-  /* color: hsl(183, 100%, 15%); */
   color: hsl(189, 41%, 97%);
 }
 
-.tip-box-custom input {
-  color: hsl(183, 100%, 15%);
-
-  /* color: hsl(189, 41%, 97%);
-
-  color: hsl(185, 41%, 84%); */
-
-
-  /* color: hsl(184, 14%, 56%); */
-}
 
 .total-amount {
   color: hsl(172, 67%, 45%);
 }
 
-/* .total-amount img svg {
-  background-color: red;
-} */
 
 .reset-button {
   background-color: hsl(172, 67%, 45%);

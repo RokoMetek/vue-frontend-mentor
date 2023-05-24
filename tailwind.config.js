@@ -7,7 +7,11 @@ export const theme = {
   extend: {
     fontFamily: {
       SpaceMono: ["Space Mono", 'monospace']
-    }
+    },
+    colors: {
+      'tipBox': 'hsl(183, 100%, 15%)',
+      'strongCyan': 'hsl(172, 67%, 45%)'
+    } 
   },
 };
 export const plugins = [];

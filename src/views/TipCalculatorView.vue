@@ -16,6 +16,6 @@ import TipCalculatorCard from '../components/TipCalculatorCard.vue';
 
 <style scoped>
 .calculator-container {
-    background-color: hsl(189, 41%, 97%);
+    background-color: hsl(185, 41%, 84%);
 }
 </style>  
