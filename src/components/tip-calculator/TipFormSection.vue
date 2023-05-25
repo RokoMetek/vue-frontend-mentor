@@ -4,7 +4,7 @@
       <slot></slot>
     </div>
     <div class="total-card flex flex-col rounded-2xl justify-between w-1/2 p-8">
-      <slot name="total-card"></slot>
+      <slot name="total"></slot>
     </div>
   </div>
 </template>

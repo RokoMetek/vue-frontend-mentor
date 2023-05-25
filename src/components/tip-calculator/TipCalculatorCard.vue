@@ -3,7 +3,9 @@
 import TipIconButton from './TipIconButton.vue'
 import TipCustomInput from './TipCustomInput.vue'
 import TipInput from './TipInput.vue'
+import TipTotal from './TipTotal.vue'
 import TipFormSection from './TipFormSection.vue'
+
 
 const bill = ref(0.00);
 const tipCustom = ref(5);
@@ -14,17 +16,17 @@ watch([bill, tipCustom, people], () => {
   tip.value = tipCustom.value; // Update the tip value if tipCustom changes
 });
 
-const tipValue = computed(() => {
+const tipAmount = computed(() => {
   if (isFormInvalid.value) return 0.00;
   const res = (bill.value * (tip.value / 100)) / people.value;
-  return res.toFixed(2);
+  return +res.toFixed(2);
 });
 
-const totalValue = computed(() => {
+const totalAmount = computed(() => {
   if (isFormInvalid.value) return 0.00;
   const billWithTip = bill.value + (bill.value * (tip.value / 100))
   const res = billWithTip / people.value;
-  return res.toFixed(2);
+  return +res.toFixed(2);
 });
 
 const isFormInvalid = computed(() => {
@@ -77,28 +79,11 @@ const onGetPeople = (value: number) => {
             type="number" placeholder="0" required />
         </div>
 
+
         <div class="total-card flex flex-col rounded-2xl justify-between md:w-1/2 p-8">
           <div class="flex flex-col gap-12 py-4">
-            <div class="flex justify-between">
-              <div class="text-sm flex flex-col gap-1">
-                <span class="text-white font-semibold">Tip Amount</span>
-                <span class="font-bold text-xs text-label">/ person</span>
-              </div>
-              <p class="text-4xl font-extrabold total-amount flex items-center">
-                <img src="/assets/images/icon-dollar.svg" alt="dollar" class="w-4 h-6.5 me-2">
-                {{ tipValue }}
-              </p>
-            </div>
-            <div class="flex justify-between">
-              <div class="text-sm flex flex-col gap-1">
-                <span class="text-white font-semibold">Total</span>
-                <span class="font-bold text-xs text-label">/ person</span>
-              </div>
-              <p class="text-4xl font-extrabold total-amount flex items-center">
-                <img src="/assets/images/icon-dollar.svg" alt="dollar" class="w-4 h-6.5 me-2">
-                {{ totalValue }}
-              </p>
-            </div>
+            <TipTotal label="Tip Amount" sublabel="/ person" icon="/assets/images/icon-dollar.svg" :value="tipAmount" />
+            <TipTotal label="Total" sublabel="/ person" icon="/assets/images/icon-dollar.svg" :value="totalAmount" />
           </div>
           <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="button" @click="onFormReset" :disabled="isFormInvalid">RESET</button>
@@ -117,10 +102,6 @@ import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   name: 'TipCalculatorCard',
-  // methods: {
-  //   onGetPercentage,
-
-  // }
 })
 
 </script>
@@ -137,10 +118,6 @@ input[type=number] {
 }
 
 
-.text-label {
-  color: hsl(184, 14%, 56%);
-}
-
 .total-card {
   background-color: hsl(183, 100%, 15%);
 }
@@ -156,10 +133,6 @@ input[type=number] {
   color: hsl(189, 41%, 97%);
 }
 
-
-.total-amount {
-  color: hsl(172, 67%, 45%);
-}
 
 
 .reset-button {
