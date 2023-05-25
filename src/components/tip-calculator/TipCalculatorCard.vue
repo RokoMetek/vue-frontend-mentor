@@ -1,9 +1,14 @@
 <script setup lang="ts">
 
+import TipIconButton from './TipIconButton.vue'
+import TipCustomInput from './TipCustomInput.vue'
+import TipInput from './TipInput.vue'
+import TipFormSection from './TipFormSection.vue'
+
 const bill = ref(0.00);
 const tipCustom = ref(5);
 const tip = ref(5);
-const people = ref(1);
+const people = ref(0);
 
 watch([bill, tipCustom, people], () => {
   tip.value = tipCustom.value; // Update the tip value if tipCustom changes
@@ -35,6 +40,18 @@ const onFormReset = () => {
   people.value = 1;
 }
 
+const onGetPercentage = (percentage: number) => {
+  tipCustom.value = percentage;
+};
+
+const onGetBill = (value: number) => {
+  bill.value = value;
+}
+
+const onGetPeople = (value: number) => {
+  people.value = value;
+}
+
 
 </script>
 
@@ -43,55 +60,21 @@ const onFormReset = () => {
     <form ref="formRef">
       <div class="flex flex-col md:flex-row gap-8 justify-between p-4">
         <div class="card-left md:w-1/2">
-          <div class="mb-6">
-            <label for="bill" class="block mb-2 text-md font-bold text-label">Bill</label>
-            <div class="relative">
-              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <img src="/assets/images/icon-dollar.svg" alt="person">
-              </div>
-              <input v-model="bill" type="number" step=".01" id="bill" class="bg-gray-100 text-tipBox rounded-md 
-                      focus:outline-none focus:border--500 focus:ring-tipBox focus:ring-2
-                      focus:invalid:border-red-500 focus:invalid:ring-red-500 
-                      focus:valid:border-strongCyan focus:valid:ring-strongCyan 
-                      block w-full p-2.5 text-xl font-bold text-end" placeholder="0" required>
-            </div>
-          </div>
+          <TipInput @getValue="onGetBill" id="bill" label="Bill" icon="/assets/images/icon-dollar.svg" type="number"
+            placeholder="0" required />
           <div class="mb-6">
             <label for="" class="block mb-2 text-md font-bold text-label">Select Tip %</label>
             <div class="grid grid-cols-3 gap-2 text-center text-white text-xl">
-              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox"
-                @click="tipCustom = 5">5%</button>
-              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox"
-                @click="tipCustom = 10">10%</button>
-              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox"
-                @click="tipCustom = 15">15%</button>
-              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox"
-                @click="tipCustom = 20">20%</button>
-              <button role="button" type="button" class="rounded-md font-bold p-2.5 bg-tipBox"
-                @click="tipCustom = 25">25%</button>
-              <div class="tip-box-custom rounded-md font-bold">
-                <input v-model="tipCustom" type="number" id="custom-tip" name="tipCustom" class="text-center bg-gray-50 text-tipBox rounded-md block w-full p-2.5 
-                    focus:outline-none focus:border--500 focus:ring-tipBox focus:ring-2
-                      focus:invalid:border-red-500 focus:invalid:ring-red-500 
-                      focus:valid:border-strongCyan focus:valid:ring-strongCyan 
-                    " placeholder="Custom" required>
-              </div>
+              <TipIconButton :label="'5%'" @getPercentage="onGetPercentage"></TipIconButton>
+              <TipIconButton :label="'10%'" @getPercentage="onGetPercentage"></TipIconButton>
+              <TipIconButton :label="'15%'" @getPercentage="onGetPercentage"></TipIconButton>
+              <TipIconButton :label="'20%'" @getPercentage="onGetPercentage"></TipIconButton>
+              <TipIconButton :label="'25%'" @getPercentage="onGetPercentage"></TipIconButton>
+              <TipCustomInput id="custom-tip" type="number" @getPercentage="onGetPercentage" />
             </div>
           </div>
-
-          <div class="mb-6">
-            <label for="people" class="block mb-2 text-md font-bold text-label">Number of People</label>
-            <div class="relative">
-              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <img src="/assets/images/icon-person.svg" alt="person">
-              </div>
-              <input v-model="people" type="number" id="people" class="bg-gray-100 text-tipBox rounded-md 
-                      focus:outline-none focus:border--500 focus:ring-tipBox focus:ring-2
-                      focus:invalid:border-red-500 focus:invalid:ring-red-500 
-                      focus:valid:border-strongCyan focus:valid:ring-strongCyan 
-                    block w-full p-2.5 text-xl font-bold text-end" placeholder="0" min="1" required>
-            </div>
-          </div>
+          <TipInput @getValue="onGetPeople" id="people" label="Number of People" icon="/assets/images/icon-person.svg"
+            type="number" placeholder="0" required />
         </div>
 
         <div class="total-card flex flex-col rounded-2xl justify-between md:w-1/2 p-8">
@@ -131,8 +114,13 @@ import { computed, watch } from "vue";
 import { defineComponent, ref } from "vue";
 
 
+
 export default defineComponent({
-  name: 'TipCalculatorCard'
+  name: 'TipCalculatorCard',
+  // methods: {
+  //   onGetPercentage,
+
+  // }
 })
 
 </script>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TipCalculatorCard from '../components/TipCalculatorCard.vue';
+import TipCalculatorCard from '../components/tip-calculator/TipCalculatorCard.vue';
 
 </script>
 
