@@ -2,8 +2,6 @@
     <div class="flex flex-col w-full rounded-tr-[8rem] footer-bg text-white p-24">
         <div class="flex justify-around items-start">
             <div>
-                <!-- <span>Icon</span> -->
-
                 <img src="/assets/images/blogr/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
             </div>
             <div>

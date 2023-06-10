@@ -4,11 +4,11 @@
             <h1 class="text-4xl text-center">Designed for the future</h1>
         </div> -->
         <div class="flex justify-center">
-            <div class="w-full flex relative">
-                <div class="text-center absolute top-14 w-full">
+            <div class="w-full flex justify-evenly relative">
+                <!-- <div class="text-center absolute top-14 w-full">
                     <h1 class="text-4xl text-center">Designed for the future</h1>
-                </div>
-                <div class="w-1/2 flex flex-col justify-center gap-6 p-16 items-end">
+                </div> -->
+                <div class="flex flex-col justify-center gap-6 p-16 container">
                     <div class="">
                         <h1 class="text-xl font-extrabold mb-4">Introduction to an existing editor</h1>
                         <p class="text-md text-start">
@@ -42,13 +42,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-1/2">
-                    <img src="/assets/images/blogr/illustration-editor-desktop.svg" alt="image">
-                </div>
+                <img src="/assets/images/blogr/illustration-editor-desktop.svg" alt="image" class="translate-x-1/4">
             </div>
         </div>
     </div>
-
 </template>
 
 

@@ -5,7 +5,7 @@ import BlogrLandingPage from '../components/blogr-page/BlogrLandingPage.vue'
 <template>
     <main class="flex flex-col justify-center mx-auto bg-gray-200 text-black">
         <div class="expenses flex justify-center">
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 w-full">
                 <BlogrHeaderPage></BlogrHeaderPage>
                 <BlogrLandingPage></BlogrLandingPage>
                 <BlogrMobilePage></BlogrMobilePage>

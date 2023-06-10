@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col intro-desktrop-image w-full bg-red-400 rounded-b-[8rem]">
         <nav class="border-gray-200">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <div class="flex gap-12">
                     <a href="#" class="flex items-center">
                         <img src="/assets/images/blogr/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />

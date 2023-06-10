@@ -1,17 +1,11 @@
 
 <template>
     <div class="flex flex-col section-1 w-full py-24">
-        <!-- <div class="my-10">
-            <h1 class="text-4xl text-center">Designed for the future</h1>
-        </div> -->
         <div class="flex justify-center">
-            <div class="w-full flex">
-                <div class="w-1/2 flex justify-end">
-                    <img src="/assets/images/blogr/illustration-laptop-desktop.svg" alt="image">
-
-                </div>
-                <div class="w-1/2 flex flex-col justify-center gap-6 p-16">
-                    <div class="">
+            <div class="w-full flex justify-evenly">
+                <img src="/assets/images/blogr/illustration-laptop-desktop.svg" alt="image" class="-translate-x-1/4">
+                <div class="flex flex-col justify-center gap-6 p-16 container">
+                    <article>
                         <h1 class="text-xl font-extrabold mb-4">Introduction to an existing editor</h1>
                         <p class="text-md text-start">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -26,8 +20,8 @@
                             Vel elit scelerisque mauris pellentesque pulvinar. Enim praesent elementum facilisis leo vel
                             fringilla est. At tellus at urna condimentum.
                         </p>
-                    </div>
-                    <div class="">
+                    </article>
+                    <article>
                         <h1 class="text-xl font-extrabold mb-4">Introduction to an existing editor</h1>
                         <p class="text-md text-start">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -42,7 +36,7 @@
                             Vel elit scelerisque mauris pellentesque pulvinar. Enim praesent elementum facilisis leo vel
                             fringilla est. At tellus at urna condimentum.
                         </p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
