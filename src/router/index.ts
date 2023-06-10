@@ -36,6 +36,11 @@ const router = createRouter({
       component: () => import('../views/TipCalculatorView.vue')
     },
     {
+      path: '/blogr',
+      name: 'blogr',
+      component: () => import('../views/BlogrLandingView.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
