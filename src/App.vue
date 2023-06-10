@@ -3,7 +3,7 @@ import AppNavbar from './components/AppNavbar.vue'
 </script>
 
 <template>
-  <header class="sticky top-0">
+  <header class="sticky top-0 z-0">
     <AppNavbar />
   </header>
   <RouterView />

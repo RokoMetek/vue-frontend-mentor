@@ -3,12 +3,14 @@ import BlogrLandingPage from '../components/blogr-page/BlogrLandingPage.vue'
 </script> -->
 
 <template>
-    <main class="container flex flex-col justify-center mx-auto bg-gray-200 text-black">
+    <main class="flex flex-col justify-center mx-auto bg-gray-200 text-black">
         <div class="expenses flex justify-center">
             <div class="flex flex-col gap-4">
+                <BlogrHeaderPage></BlogrHeaderPage>
                 <BlogrLandingPage></BlogrLandingPage>
-                <BlogrMobilePageVue></BlogrMobilePageVue>
-                <BlogrLaptopPageVue></BlogrLaptopPageVue>
+                <BlogrMobilePage></BlogrMobilePage>
+                <BlogrLaptopPage></BlogrLaptopPage>
+                <BlogrFooterPage></BlogrFooterPage>
             </div>
         </div>
     </main>
@@ -18,15 +20,17 @@ import BlogrLandingPage from '../components/blogr-page/BlogrLandingPage.vue'
 import { defineComponent } from "vue";
 import BlogrLandingPage from '../components/blogr-page/BlogrLandingPage.vue'
 
-import BlogrLaptopPageVue from "../components/blogr-page/BlogrLaptopPage.vue";
-import BlogrMobilePageVue from "../components/blogr-page/BlogrMobilePage.vue"
+import BlogrLaptopPage from "../components/blogr-page/BlogrLaptopPage.vue";
+import BlogrMobilePage from "../components/blogr-page/BlogrMobilePage.vue";
+import BlogrHeaderPage from "../components/blogr-page/BlogrHeaderPage.vue";
+import BlogrFooterPage from "../components/blogr-page/BlogrFooterPage.vue";
 
 defineComponent({
     name: 'BlogrLandingView',
     components: {
         // BlogrLandingPage,
         // BlogrLaptopPageVue,
-        BlogrMobilePageVue
+        // BlogrMobilePageVue
     }
 });
 
