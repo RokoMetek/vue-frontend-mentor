@@ -10,7 +10,9 @@ export const theme = {
     },
     colors: {
       'tipBox': 'hsl(183, 100%, 15%)',
-      'strongCyan': 'hsl(172, 67%, 45%)'
+      'strongCyan': 'hsl(172, 67%, 45%)',
+      'tomato': 'hsl(4, 100%, 67%)',
+      'slateGrey': 'hsl(234, 29%, 20%)'
     } 
   },
 };

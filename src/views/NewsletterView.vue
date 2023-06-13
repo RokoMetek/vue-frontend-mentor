@@ -1,13 +1,15 @@
 <script lang="ts" setup>
+import NewsletterConfirmation from '../components/newsletter/NewsletterConfirmation.vue';
 import NewsletterCard from '../components/newsletter/NewsletterCard.vue';
 
 </script>
 
 
 <template>
-    <main class="container-2xl calculator-container flex flex-col justify-center mx-auto h-screen text-black bg-dark-slate-grey">
-        <div class="flex justify-center">
-            <NewsletterCard></NewsletterCard>
+    <main class="container-2xl calculator-container flex flex-col justify-center mx-auto h-screen text-black bg-gray-800">
+        <div class="flex flex-col justify-center gap-2">
+            <!-- <NewsletterCard></NewsletterCard> -->
+            <NewsletterConfirmation></NewsletterConfirmation>
             <!-- <div class="flex flex-col gap-4">
                 <div>Newsletter View</div>
             </div> -->

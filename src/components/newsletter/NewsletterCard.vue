@@ -41,12 +41,13 @@
                     </div>
 
                     <form>
-                        <label for="small-input" class="block text-sm font-medium text-gray-900 mb-2">Email
+                        <label for="small-input" class="text-sm font-medium text-gray-900 mb-2 block">Email
                             address</label>
                         <input type="text" id="small-input"
-                            class="block w-full p-2 text-gray-900 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 py-2.5 mb-4">
+                            placeholder="email@componay.com"
+                            class="block w-full p-2 text-gray-900 border border-gray-200 rounded-lg focus:ring-blue-500 focus:border-blue-500 py-2.5 mb-4">
                         <button type="button"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Subscribe
+                            class="block bg-slateGrey hover:bg-tomato text-white bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Subscribe
                             to monthly newsletter</button>
                     </form>
                 </div>
@@ -57,4 +58,8 @@
 </template>
 
 
-<style scoped></style>
+<style scoped>
+.bg-dark-slate-grey {
+    background-color: hsl(243, 29%, 20%);
+}
+</style>
