@@ -33,7 +33,7 @@ export default defineComponent({
                     </p>
                     <button type="button"
                         @click="dismissMessage"
-                        class="block bg-slateGrey hover:bg-tomato text-white bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full">
+                        class="block bg-slateGrey hover:bg-tomato hover:shadow-md hover:shadow-tomato enabled:hover:bg-gradient-to-r from-rose-600 to-tomato text-white bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full">
                         Dismiss message
                     </button>
                 </div>
