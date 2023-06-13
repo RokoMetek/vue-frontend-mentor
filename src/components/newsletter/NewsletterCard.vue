@@ -9,13 +9,11 @@ export default defineComponent({
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
         };
-
         const subscribe = () => {
             if (!validateEmail(email.value)) {
                 return;
             }
         };
-
         return {
             email,
             validateEmail,
@@ -68,16 +66,17 @@ export default defineComponent({
                         </ul>
                     </div>
                     <form @submit.prevent="subscribe">
-                        <div class="flex justify-between">
-                            <label for="small-input" class="text-sm font-medium text-gray-900 mb-2 block">Email
+                        <div class="flex justify-between mb-2">
+                            <label for="small-input" class="text-sm font-medium text-gray-900 block">Email
                                 address</label>
-                            <p v-if="email && !validateEmail(email)" class="text-sm font-medium text-gray-900 mb-2 block">Valid email required</p>
+                            <p v-if="email && !validateEmail(email)" class="text-sm font-medium block text-red-400">Valid email required</p>
                         </div>
                         <input type="email" id="small-input" v-model="email" placeholder="email@componay.com"
-                            :class="{ 'bg-red-50 border-red-300' : (email && !validateEmail(email))}"
+                            :class="{ 'bg-red-50 border-red-300 text-red-400' : (email && !validateEmail(email))}"
                             class="block w-full p-2 text-gray-900 border-2 border-gray-200 rounded-lg py-2.5 mb-4 focus-visible:outline-none">
                         <button type="submit"
-                            class="block bg-slateGrey hover:shadow-xl hover:shadow-tomato  hover:bg-gradient-to-r from-rose-600 to-tomato  text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Subscribe
+                            :disabled="!validateEmail(email)"
+                            class=" disabled:bg-gray-400 block bg-slateGrey enabled:hover:shadow-xl enabled:hover:shadow-tomato enabled:hover:bg-gradient-to-r from-rose-600 to-tomato  text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Subscribe
                             to monthly newsletter</button>
                     </form>
                 </div>
