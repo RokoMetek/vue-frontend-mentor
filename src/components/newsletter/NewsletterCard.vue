@@ -3,7 +3,7 @@
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
-    setup() {
+    setup(_, { emit }) {
         const email = ref('');
         const validateEmail = (email: string): boolean => {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -13,6 +13,7 @@ export default defineComponent({
             if (!validateEmail(email.value)) {
                 return;
             }
+            emit('form-submitted', email.value)
         };
         return {
             email,
