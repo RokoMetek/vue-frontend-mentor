@@ -1,3 +1,31 @@
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+    setup() {
+        const email = ref('');
+        const validateEmail = (email: string): boolean => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        };
+
+        const subscribe = () => {
+            if (!validateEmail(email.value)) {
+                return;
+            }
+        };
+
+        return {
+            email,
+            validateEmail,
+            subscribe
+        };
+    }
+})
+</script>
+
+
 <template>
     <div class="container-sm bg-white mx-auto px-4 rounded-3xl p-2">
         <div class="flex flex-col items-center">
@@ -39,15 +67,17 @@
                             </li>
                         </ul>
                     </div>
-
-                    <form>
-                        <label for="small-input" class="text-sm font-medium text-gray-900 mb-2 block">Email
-                            address</label>
-                        <input type="text" id="small-input"
-                            placeholder="email@componay.com"
-                            class="block w-full p-2 text-gray-900 border border-gray-200 rounded-lg focus:ring-blue-500 focus:border-blue-500 py-2.5 mb-4">
-                        <button type="button"
-                            class="block bg-slateGrey hover:bg-tomato text-white bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Subscribe
+                    <form @submit.prevent="subscribe">
+                        <div class="flex justify-between">
+                            <label for="small-input" class="text-sm font-medium text-gray-900 mb-2 block">Email
+                                address</label>
+                            <p v-if="email && !validateEmail(email)" class="text-sm font-medium text-gray-900 mb-2 block">Valid email required</p>
+                        </div>
+                        <input type="email" id="small-input" v-model="email" placeholder="email@componay.com"
+                            :class="{ 'bg-red-50 border-red-300' : (email && !validateEmail(email))}"
+                            class="block w-full p-2 text-gray-900 border-2 border-gray-200 rounded-lg py-2.5 mb-4 focus-visible:outline-none">
+                        <button type="submit"
+                            class="block bg-slateGrey hover:shadow-xl hover:shadow-tomato  hover:bg-gradient-to-r from-rose-600 to-tomato  text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full">Subscribe
                             to monthly newsletter</button>
                     </form>
                 </div>
@@ -58,8 +88,4 @@
 </template>
 
 
-<style scoped>
-.bg-dark-slate-grey {
-    background-color: hsl(243, 29%, 20%);
-}
-</style>
+<style scoped></style>
