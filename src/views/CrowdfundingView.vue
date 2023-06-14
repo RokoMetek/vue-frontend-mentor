@@ -4,6 +4,7 @@ import { defineComponent } from 'vue'
 import CrowdfundingAbout from '../components/crowdfunding/CrowdfundingAbout.vue';
 import CrowdfundingInfo from '../components/crowdfunding/CrowdfundingInfo.vue';
 import CrowdfundingTitle from '../components/crowdfunding/CrowdfundingTitle.vue'
+import CrowdfundingNavigation from '../components/crowdfunding/CrowdfundingNavigation.vue'
 
 export default defineComponent({
     setup() {
@@ -13,6 +14,7 @@ export default defineComponent({
         CrowdfundingTitle,
         CrowdfundingInfo,
         CrowdfundingAbout,
+        CrowdfundingNavigation
     }
 })
 </script>
@@ -22,8 +24,8 @@ export default defineComponent({
         <div
             class="w-full h-96 bg-red-500 hero-bg bg-no-repeat bg-center bg-[url('assets/images/crowdfunding/image-hero-desktop.jpg')]">
         </div>
-        <main
-            class="justify-center mx-auto text-black -top-24 relative">
+        <CrowdfundingNavigation></CrowdfundingNavigation>
+        <main class="justify-center mx-auto text-black -top-24 relative">
             <div class="flex flex-col justify-center gap-4">
                 <CrowdfundingTitle></CrowdfundingTitle>
                 <CrowdfundingInfo></CrowdfundingInfo>
@@ -35,8 +37,6 @@ export default defineComponent({
 
 <style scoped>
 .hero-bg {
-    /* background-image: url('assets/images/crowdfunding/image-hero-desktop.jpg'); */
-    /* background-repeat: no-repeat; */
     background-size: 100% 100%;
 }
 </style>

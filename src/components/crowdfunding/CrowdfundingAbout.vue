@@ -1,7 +1,7 @@
 <template>
     <div class="container rounded-md bg-white mx-auto px-8 p-2">
         <div class="py-4">
-            <h1 class="text-2xl font-extrabold mb-2">About this project</h1>
+            <h1 class="text-2xl font-extrabold mb-6">About this project</h1>
             <p class="text-base mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aut at nisi quibusdam quas nemo aliquam nam
                 omnis,
@@ -21,7 +21,7 @@
                 earum ea.
             </p>
         </div>
-        <div class="px-8 bg-white my-4 border-2 mx-4 py-4 rounded-md">
+        <div class="px-8 bg-white my-4 border-2 py-4 rounded-md">
             <div>
                 <div class="flex my-4 justify-between">
                     <h2 class="text-gray-800 text-3xl font-semibold">Bambo Stand</h2>
