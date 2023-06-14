@@ -82,9 +82,9 @@ export default defineComponent({
                     </form>
                 </div>
                     <picture>
-                        <source media="(max-width: 767px)"
+                        <!-- <source media="(max-width: 767px)"
                         class="w-full"
-                            srcset="assets/images/newsletter-sign-up/illustration-sign-up-mobile.svg">
+                            srcset="assets/images/newsletter-sign-up/illustration-sign-up-mobile.svg"> -->
                         <img src="assets/images/newsletter-sign-up/illustration-sign-up-desktop.svg" class="bg-auto w-full"
                             alt="IfItDoesntMatchAnyMedia">
                     </picture>
