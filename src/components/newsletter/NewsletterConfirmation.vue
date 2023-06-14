@@ -1,8 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue"
 
-
-
 export default defineComponent({
     setup(_, { emit }) {
         const dismissMessage = () => {
@@ -14,7 +12,6 @@ export default defineComponent({
     },
 })
 </script>
-
 
 
 <template>

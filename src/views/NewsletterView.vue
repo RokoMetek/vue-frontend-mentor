@@ -10,7 +10,7 @@ const handleSubmit = () => {
     showConfirmation.value = true;
 }
 
-const dismisConfiramtion = () => {
+const dismissConfirmation = () => {
     showConfirmation.value = false;
 }
 
@@ -20,7 +20,7 @@ const dismisConfiramtion = () => {
     <main class="container-2xl calculator-container flex flex-col justify-center mx-auto min-h-screen text-black bg-gray-800 p-8">
         <div class="flex flex-col justify-center gap-2">
             <NewsletterCard v-if="!showConfirmation" @form-submitted="handleSubmit"></NewsletterCard>
-            <NewsletterConfirmation v-if="showConfirmation" @dismissed="dismisConfiramtion"></NewsletterConfirmation>
+            <NewsletterConfirmation v-if="showConfirmation" @dismissed="dismissConfirmation"></NewsletterConfirmation>
         </div>
     </main>
 </template>
