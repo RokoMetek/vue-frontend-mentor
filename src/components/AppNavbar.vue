@@ -80,6 +80,13 @@ const toggleNavbar = () => {
               <span class="ml-2">Newsletter</span>
             </RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink to="/crowdfunding"
+              class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
+              <i class="fab fa-twitter text-lg leading-lg text-white opacity-75"></i>
+              <span class="ml-2">Crowdfunding</span>
+            </RouterLink>
+          </li>
         </ul>
       </div>
     </div>

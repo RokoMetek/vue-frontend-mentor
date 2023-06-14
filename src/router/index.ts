@@ -46,6 +46,11 @@ const router = createRouter({
       component: () => import('../views/NewsletterView.vue')
     },
     {
+      path: '/crowdfunding',
+      name: 'crowdfunding',
+      component: () => import('../views/CrowdfundingView.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting
