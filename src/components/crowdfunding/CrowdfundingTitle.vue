@@ -2,7 +2,7 @@
     <div class="container rounded-md bg-white mx-auto px-8 py-12 relative">
         <div class="flex justify-center md:justify-center -mt-20 mb-8">
             <img class="w-16 h-16 object-cover rounded-full"
-                src="assets/images/crowdfunding/logo-mastercraft.svg">
+                src="/assets/images/crowdfunding/logo-mastercraft.svg">
         </div>
         <div class="flex flex-col items-center gap-6 mb-6">
             <h1 class="text-4xl font-extrabold">Mastercraft Bamboo Monitor Riser</h1>

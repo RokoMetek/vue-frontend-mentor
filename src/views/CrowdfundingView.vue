@@ -22,7 +22,7 @@ export default defineComponent({
 <template>
     <div class="relative flex flex-col justify-center bg-gray-100">
         <div
-            class="w-full h-96 bg-red-500 hero-bg bg-no-repeat bg-center bg-[url('assets/images/crowdfunding/image-hero-desktop.jpg')]">
+            class="w-full h-96 bg-red-500 hero-bg bg-no-repeat bg-center bg-[url('/assets/images/crowdfunding/image-hero-desktop.jpg')]">
         </div>
         <CrowdfundingNavigation></CrowdfundingNavigation>
         <main class="justify-center mx-auto text-black -top-24 relative">
